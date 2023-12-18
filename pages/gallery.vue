@@ -1,5 +1,6 @@
 <script setup lang="ts">
-const { data } = await useFetch('http://111.230.249.159:8882/all')
+import { useGallery } from "~/composeable/useGallery"
+const { list:data } = useGallery()
 const imageList = ref<string[]>([])
 imageList.value = data.value as string[]
 const el = ref<HTMLElement>()

@@ -1,10 +1,9 @@
 <script setup lang="ts">
+import { useIndexVideo } from "~/composeable/useIndexVideo"
 const imgContainer = ref<HTMLElement>();
-const imageList = ref<string[]>([]);
-const { data } = await useFetch("http://111.230.249.159:8882/homepage");
-console.log(data.value);
+const { list: imageList } = useIndexVideo()
+console.log(imageList.value);
 
-imageList.value = data.value as string[];
 const isLoad = ref(false);
 const imageMap = ref(new Map());
 const currentKey = ref(0);

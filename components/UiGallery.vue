@@ -44,7 +44,7 @@ defineExpose({ load })
           <img class="h-[100vh] object-scale-down" data-modal-target="static-modal" data-modal-hide="static-modal" :src="tempSrc"  alt="这是大图大图" sizes="" srcset="" />
       </div>
   </div>
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-8">
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:px-8">
      <div class="grid gap-4 items-stretch" v-for="(item,index) in currentList" :key="index">
          <img @click="()=>tempSrc = img" data-modal-target="static-modal" data-modal-toggle="static-modal"  :src="img" class="h-auto max-w-full rounded-lg" alt="钟晨瑶啦" v-for="img in item" :key="img" />
      </div>

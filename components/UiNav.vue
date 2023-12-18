@@ -1,5 +1,6 @@
 
 <script setup lang="ts">
+import { initFlowbite } from 'flowbite'
 const changeTheme = () => {
   const html = document.querySelector('html')
   if (html?.classList.contains('dark')) {
@@ -20,6 +21,7 @@ const getActiveClass = (path: string) =>{
 onMounted(() => { 
   const html = document.querySelector('html')
   const theme = localStorage.getItem('theme')
+  initFlowbite();
   if (theme === 'dark') { 
     html?.classList.add('dark')
   } else { 

@@ -2,7 +2,6 @@
 import { useIndexVideo } from "~/composeable/useIndexVideo"
 const imgContainer = ref<HTMLElement>();
 const { list: imageList } = useIndexVideo()
-console.log(imageList.value);
 
 const isLoad = ref(false);
 const imageMap = ref(new Map());

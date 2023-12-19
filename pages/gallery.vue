@@ -14,7 +14,7 @@ watchEffect(() => {
 </script>
 
 <template>
-  <div class="p-4 overflow-auto h-full" ref="el">
+  <div class="p-4 overflow-auto h-full bg-white dark:bg-gray-900" ref="el">
     <UiGallery ref="gallery" :image-list="imageList"></UiGallery>
   </div>
 </template>

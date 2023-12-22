@@ -7,7 +7,7 @@ interface ITimeitem {
 }
 const list = shallowRef<ITimeitem[]>([])
 onMounted(async () => {
-  const response = await fetch('/timeline.json')
+  const response = await fetch('https://assets.izhong.xyz/timeline.json')
   if (response.ok) {
     list.value = await response.json()
   }

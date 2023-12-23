@@ -16,6 +16,9 @@ export default defineNuxtConfig({
       },
     }
   },
+  build: {
+    transpile: [/echarts/, 'vue-echarts', 'resize-detector', 'tslib', '@popperjs/core'],
+  },
   devtools: { enabled: true },
   css: ["./assets/base.css"],
 })

@@ -6,12 +6,13 @@ interface ITimeitem {
   link?: string
 }
 const list = shallowRef<ITimeitem[]>([])
-onMounted(async () => {
+async function loadList() {
   const response = await fetch('https://assets.izhong.xyz/timeline.json')
   if (response.ok) {
     list.value = await response.json()
   }
-})
+}
+await loadList()
 </script>
 
 <template>

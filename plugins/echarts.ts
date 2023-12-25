@@ -29,5 +29,4 @@ export default defineNuxtPlugin((nuxtAPP) => {
     LabelLayout,
   ]);
   //@ts-ignore
-  registerMap('china', china);
 });
